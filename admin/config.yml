@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: natdjerf/alley-cat-crane-js
+  use_graphql: true
+
+media_folder: "images/uploads"
+
+collections:
+  - label: "Equipment"
+    name: "equipment"
+    folder: "content/equipment"
+    create: true
+    fields:
+      - { label: Name, name: name, widget: string, hint: "Used for admin page" }
+      - {
+          label: Title,
+          name: title,
+          widget: string,
+          hint: "Used for equipment page",
+        }
+      - {
+          label: Type,
+          name: type,
+          widget: string,
+          hint: "Must be one of the following: crane, mini, city, rough, boom",
+        }
+      - {
+          label: Image,
+          name: image_url,
+          widget: image,
+          hint: "For equipment page - please use PNG with transparent background",
+        }
+      - {
+          label: Technical Specs,
+          name: spec_url,
+          widget: file,
+          hint: "PDF of equipment spec",
+        }
